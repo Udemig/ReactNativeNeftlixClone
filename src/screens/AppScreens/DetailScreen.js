@@ -10,21 +10,27 @@ import DetailHeader from '../../components/DetailScreenComponents/DetailHeader';
 import DetailInfo from '../../components/DetailScreenComponents/DetailInfo';
 import IconsBar from '../../components/DetailScreenComponents/IconsBar';
 import DetailBottom from '../../components/DetailScreenComponents/DetailBottomComponents/DetailBottom';
+import { useRoute } from '@react-navigation/native';
 
 const DetailScreen = () => {
+  const route=useRoute()
+  console.log(route.params.movie)
+const{title,id,poster_path,overview}=route.params.movie
   return (
     <View className="flex-1 bg-black">
       <DetailScreenHeader />
 
       <ScrollView className=" flex-1">
-        <Image
-          source={{uri: images.dailyTrend}}
-          className=" w-screen h-60"
-          style={{resizeMode: 'stretch'}}
-        />
+   <View  className=" w-screen h-60">
+   <Image
+          source={{uri: `https://image.tmdb.org/t/p/original${poster_path}`}}
+         
+          style={{width:'100%',height:'100%',resizeMode: 'cover'}}
+        /> 
+   </View>
         <View className="ml-3 mt-2 mb-6" style={{gap: 10}}>
-          <DetailHeader />
-          <DetailInfo />
+          <DetailHeader header={title}/>
+          <DetailInfo overview={overview}/>
           <IconsBar />
         </View>
         <DetailBottom/>

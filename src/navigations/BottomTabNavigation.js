@@ -9,6 +9,8 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 import NewPopularStackScreen from '../screens/StackScreens/NewPopularStackScreen';
 import SearchScreen from '../screens/AppScreens/SearchScreen';
 import DetailScreen from '../screens/AppScreens/DetailScreen';
+import HomeStackScreen from '../screens/StackScreens/HomeStackScreen';
+import DownloadsStackScreen from '../screens/StackScreens/DownloadsStackScreen';
 
 const BottomTabNavigation = () => {
   const TabStack = createBottomTabNavigator();
@@ -18,13 +20,13 @@ const BottomTabNavigation = () => {
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
 
-          if (route.name === 'HomeScreen') {
+          if (route.name === 'HomeStackScreen') {
             iconName = focused ? 'home' : 'home';
           } else if (route.name === 'GamingScreen') {
             iconName = focused ? 'sports-esports' : 'sports-esports';
           } else if (route.name === 'NewPopularStackScreen') {
             iconName = focused ? 'playlist-play' : 'playlist-play';
-          } else if (route.name === 'DownloadsScreen') {
+          } else if (route.name === 'DownloadsStackScreen') {
             iconName = focused ? 'downloading' : 'downloading';
           }
 
@@ -35,27 +37,27 @@ const BottomTabNavigation = () => {
         tabBarInactiveTintColor: 'gray',
         tabBarItemStyle: {
           backgroundColor: 'black',
-        borderTopColor:'red'
+          borderTopColor: 'red',
         },
+        headerShown: false,
       })}>
-      <TabStack.Screen
-        options={{headerShown: false}}
-        name="DetailScreen"
-        component={DetailScreen}
-      />
-      <TabStack.Screen
+     <TabStack.Screen name="GamingScreen" component={GamesScreen} />
+<TabStack.Screen
         options={{headerShown: false}}
         name="NewPopularStackScreen"
         component={NewPopularStackScreen}
       />
       <TabStack.Screen
-        options={{headerShown: false}}
-        name="HomeScreen"
-        component={HomeScreen}
+        name="DownloadsStackScreen"
+        component={DownloadsStackScreen}
       />
-      <TabStack.Screen name="GamingScreen" component={GamesScreen} />
-
-      <TabStack.Screen name="DownloadsScreen" component={DownloadsScreen} />
+  
+      <TabStack.Screen
+        options={{headerShown: false}}
+        name="HomeStackScreen"
+        component={HomeStackScreen}
+      />
+ 
     </TabStack.Navigator>
   );
 };

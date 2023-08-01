@@ -7,7 +7,7 @@ const HomeFiliterBar = () => {
     <View className='flex-row p-3'>
       <FiliterItem filiterLabel={'Diziler'} />
       <FiliterItem filiterLabel={'Filmler'} />
-      <FiliterItem filiterLabel={'Kategoriler'} filiterIcon={'expand-more'} />
+      <FiliterItem filiterLabel={'Kategoriler'} filiterIcon={'chevron-down'} />
     </View>
   );
 };

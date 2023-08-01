@@ -14,7 +14,7 @@ const PosterButtonBar = () => {
       </View>
       <View className="flex-row justify-between">
         <SpecialButton title={'Oynat'} type={'light'} />
-        <SpecialButton title={'Listem'} butonIcon={'done'} type={'dark'} />
+        <SpecialButton title={'Listem'} butonIcon={'add'} type={'dark'} />
       </View>
     </View>
   );

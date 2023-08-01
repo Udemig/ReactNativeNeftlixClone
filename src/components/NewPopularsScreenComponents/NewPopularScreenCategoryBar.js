@@ -18,7 +18,7 @@ const {setIndex}=useContext(DataContext)
           <CategoryItem
             source={require(`../../assets/catImages/popcorn.png`)}
             catName={item.categoryName}
-onPress={()=>setIndex(item.categoryName)}
+onPress={()=>setIndex({name:item.categoryName,url:item.categoryUrl})}
           />
         )}
       />

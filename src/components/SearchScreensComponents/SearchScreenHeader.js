@@ -12,7 +12,7 @@ const SearchScreenHeader = () => {
       <View className="flex-row justify-between p-3">
 
           <PIcon
-            onPress={() => navigation.navigate('NewPopularScreen')}
+            onPress={() => navigation.goBack()}
             name={'arrow-back'}
             color={'white'}
             size={24}

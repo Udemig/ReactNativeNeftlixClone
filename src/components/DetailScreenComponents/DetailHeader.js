@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import PIcon from '../CoreComponents/PIcon';
 
-const DetailHeader = () => {
+const DetailHeader = ({header}) => {
   return (
     <View style={{gap: 5}}>
       <View className="flex-row  ">
@@ -14,7 +14,7 @@ const DetailHeader = () => {
           Dizi
         </Text>
       </View>
-      <Text className="text-white text-3xl font-extrabold">The Witcher</Text>
+      <Text className="text-white text-3xl font-extrabold">{header}</Text>
 
       <View className="flex-row" style={{gap: 12}}>
         <Text className="text-gray-400 ">2021</Text>

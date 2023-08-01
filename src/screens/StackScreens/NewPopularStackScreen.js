@@ -12,6 +12,7 @@ const NewPopularStackScreen = () => {
 <Ntack.Navigator screenOptions={{headerShown:false}}>
     <Ntack.Screen name='NewPopularScreen' component={NewPopularsScreen}/>
     <Ntack.Screen name='SearchStackScreen' component={SearchStackScreen}/>
+    <Ntack.Screen name='DetailScreen' component={DetailScreen}/>
 
 </Ntack.Navigator>
   )

@@ -13,7 +13,7 @@ const SpecialButton = ({
 }) => {
   return (
     <TouchableOpacity
-  
+ 
       onPress={onPress}
       className={`${
         type == 'light' ? 'bg-white' : type == 'dark' ? 'bg-gray-800' : null

@@ -1,10 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View ,ScrollView } from 'react-native'
 import React from 'react'
+import GamingScreenHeader from '../../components/GamingScreenComponents/GamingScreenHeader'
+
+import TrendGame from '../../components/GamingScreenComponents/TrendGame'
 
 const GamesScreen = () => {
   return (
-    <View>
-      <Text>GamesScreen</Text>
+    <View className='bg-black flex-1'>
+<GamingScreenHeader/>
+<View className='flex-1'>
+
+<TrendGame/>
+
+</View>
     </View>
   )
 }

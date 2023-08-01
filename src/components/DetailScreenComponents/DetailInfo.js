@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import SpecialButton from '../CoreComponents/SpecialButton';
-const DetailInfo = () => {
+const DetailInfo = ({overview}) => {
   return (
     <View style={{gap: 10}} >
       <View className="flex-row items-center " style={{gap: 10}}>
@@ -22,9 +22,7 @@ const DetailInfo = () => {
       />
 
       <Text className="text-white">
-        The Witcher, senaryosu Lauren Schmidt Hissrich tarafından yazılan ve
-        Netflix'te yayımlanan fantezi drama türündeki Amerikan yapımı internet
-        dizisi.{' '}
+       {overview}
       </Text>
 
       <View className="flex-row">

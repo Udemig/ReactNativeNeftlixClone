@@ -7,17 +7,15 @@ import HomeCard from '../../components/HomeScreenComponents/HomeCard';
 
 const HomeScreen = () => {
   return (
-    <View className="bg-gray-500 flex-1">
+    <View className="bg-gray-900 flex-1">
       <HomeHeader />
 
-      <View className="bg-red-50 flex-1">
-
-         
-            <HomeFiliterBar />
-            <DailyTrend />
-            <HomeCard categoryTitle={`Netflix ' te Populer`} />
-         
-    
+      <View className=" flex-1">
+        <ScrollView>
+          <HomeFiliterBar />
+          <DailyTrend />
+          <HomeCard categoryTitle={`Netflix ' te Populer`} />
+        </ScrollView>
       </View>
     </View>
   );

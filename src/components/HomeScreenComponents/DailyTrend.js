@@ -7,8 +7,9 @@ import PosterButtonBar from './PosterButtonBar';
 const DailyTrend = () => {
   return (
     <View
-      className="relative px-3 rounded-lg h-4/6 "
+      className="relative mx-6 mt-3 rounded-lg  border border-white border-1"
       style={{
+        height:500,
         shadowColor: '#000000',
         shadowOffset: {
           width: 0,
@@ -22,16 +23,12 @@ const DailyTrend = () => {
         style={{
           resizeMode: 'stretch',
         }}
-        className="w-full h-full rounded-lg border border-white border-1"
+        className="w-full h-full rounded-lg "
         source={{uri: images.dailyTrend}}
       />
-<View className='absolute bottom-5 left-16'>
-<PosterButtonBar/>
-</View>
-   
-     
-    
-    
+      <View className="absolute bottom-5 left-16">
+        <PosterButtonBar />
+      </View>
     </View>
   );
 };

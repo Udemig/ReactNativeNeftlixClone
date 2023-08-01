@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React,{memo} from 'react';
 import PIcon from '../CoreComponents/PIcon';
 import Avatar from '../CoreComponents/Avatar';
 import {images} from '../../utils/constants';
@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const NewPopularsScreenHeader = () => {
   const navigation = useNavigation()
+  //console.log('ben header render oluyorum')
   return (
     //Header için ana taşıyıcı
     <View>
@@ -34,6 +35,6 @@ const NewPopularsScreenHeader = () => {
   );
 };
 
-export default NewPopularsScreenHeader;
+export default memo(NewPopularsScreenHeader);
 
 const styles = StyleSheet.create({});

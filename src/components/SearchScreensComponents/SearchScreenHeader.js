@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, { memo } from 'react';
 import PIcon from '../CoreComponents/PIcon';
 import Avatar from '../CoreComponents/Avatar';
 import SearchBar from './SearchBar';
@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 
 const SearchScreenHeader = () => {
   const navigation = useNavigation();
+  console.log('ben search header')
   return (
     <View>
       <View className="flex-row justify-between p-3">
@@ -30,6 +31,6 @@ const SearchScreenHeader = () => {
   );
 };
 
-export default SearchScreenHeader;
+export default memo(SearchScreenHeader);
 
 const styles = StyleSheet.create({});

@@ -26,17 +26,17 @@ export const poster=[
 
 export const PopularsCategory=[
   {
-    categoryImage:`../../assets/catImages/fire.png`,
+    categoryImage:`require('../../assets/catImages/fire.png')`,
     categoryName:'Çok Yakında',
     categoryUrl:'upcoming'
   },
   {
-   categoryImage:`../../assets/catImages/fire.png`,
+    categoryImage:`require('../../assets/catImages/fire.png')`,
     categoryName:'Herkes Bunları İzliyor',
     categoryUrl:'popular'
   },
   {
-    categoryImage:`../../assets/catImages/fire.png`,
+    categoryImage:`require('../../assets/catImages/fire.png')`,
     categoryName:'Oyunlar'
   },
 

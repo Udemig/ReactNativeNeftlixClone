@@ -41,23 +41,27 @@ const BottomTabNavigation = () => {
         },
         headerShown: false,
       })}>
-     <TabStack.Screen name="GamingScreen" component={GamesScreen} />
+
+
 <TabStack.Screen
-        options={{headerShown: false}}
-        name="NewPopularStackScreen"
-        component={NewPopularStackScreen}
-      />
-      <TabStack.Screen
-        name="DownloadsStackScreen"
-        component={DownloadsStackScreen}
-      />
-  
-      <TabStack.Screen
         options={{headerShown: false}}
         name="HomeStackScreen"
         component={HomeStackScreen}
       />
- 
+
+<TabStack.Screen name="GamingScreen" component={GamesScreen} />
+      <TabStack.Screen
+        options={{headerShown: false}}
+        name="NewPopularStackScreen"
+        component={NewPopularStackScreen}
+      />
+   
+      <TabStack.Screen
+        name="DownloadsStackScreen"
+        component={DownloadsStackScreen}
+      />
+
+    
     </TabStack.Navigator>
   );
 };
